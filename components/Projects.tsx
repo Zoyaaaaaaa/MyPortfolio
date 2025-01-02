@@ -50,13 +50,19 @@ export function Projects() {
       link: "https://github.com/Zoyaaaaaaa/Editify",
       image: "/images/editify.png",
     },
-   
     {
       title: "Talk to Website",
       description: "An AI-powered web assistant that allows users to interact with and extract information from any website through natural language conversations. Features include semantic search, content summarization, and intelligent Q&A capabilities.",
-      link: "#",
+      link: "https://github.com/Zoyaaaaaaa/TalkToWebsite",
       image: "/images/talktowebsite.jpg",
     },
+    {
+      title: "AI Strategy & Use Case Research Agent",
+      description: "A Streamlit-powered application that leverages OpenAI and Exa APIs to provide strategic insights, AI/ML use cases, and curated resources for any industry. Generate actionable proposals with features like industry research, tailored AI solutions, and dataset discovery.",
+      link: "https://github.com/Zoyaaaaaaa/Market-Research-AI-Agents",
+      image: "/images/MarketResearch.png",
+    }
+    
   ];
 
   return (

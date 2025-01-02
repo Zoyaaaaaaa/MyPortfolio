@@ -19,6 +19,16 @@ const experiences: Experience[] = [
       "Generative AI & LLM Integration: Fine-tuned LLMs and created AI-driven applications to enhance EdTech platforms.",
       "Web Application Development: Enhanced UI/UX and added user-focused features for EdTech platforms."
     ]
+  },
+  {
+    company: "AmberFlux",
+    role: "Backend Applications Development Intern",
+    period: "Nov 2024 - Feb 2025",
+    responsibilities: [
+      "Developed and maintained RESTful APIs for application-to-application integration, focusing on robust error handling and documentation",
+      "Created test scripts and conducted API testing for both ideal and exception cases to ensure reliability",
+      "Implemented efficient database structures and data management solutions for scalable applications"
+    ]
   }
 ];
 
@@ -157,6 +167,7 @@ export const WorkExperience = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
