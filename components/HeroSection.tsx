@@ -11,6 +11,7 @@ import {
   FileCode2,
   Mail,
   LinkIcon,
+  Book,
 } from "lucide-react";
 
 export function Header() {
@@ -64,14 +65,21 @@ export function Header() {
       ),
       href: "https://github.com/Zoyaaaaaaa",
     },
+    {
+      title: "Resume",
+      icon: (
+        <Book className="h-full w-full text-neutral-400 group-hover:text-emerald-400 transition-all duration-300" />
+      ),
+      href: "https://drive.google.com/file/d/1NQLxwLEaWSER6fvkxPKvk78u0F6Am-Rn/view?usp=sharing",
+    }
   ];
 
   return (
     <div className="fixed bottom-8 right-8 z-50">
-      <FloatingDock
+           <FloatingDock
         items={links}
-        desktopClassName="bg-neutral-900/80 backdrop-blur-md border border-white-800/50 shadow-xl shadow-emerald-500/10 hover:shadow-emerald-500/20 transition-all duration-300"
-        mobileClassName="bg-neutral-900/90 backdrop-blur-md border border-neutral-800/50 shadow-xl shadow-emerald-500/10"
+        desktopClassName="bg-neutral-900/80 backdrop-blur-md border border-emerald-800/30 shadow-xl shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:border-emerald-700/40 hover:bg-neutral-900/90 transition-all duration-300 ring-1 ring-emerald-900/20"
+        mobileClassName="bg-neutral-900/90 backdrop-blur-md border border-emerald-800/30 shadow-xl shadow-emerald-500/20 ring-1 ring-emerald-900/20"
       />
     </div>
   );

@@ -23,7 +23,7 @@ const experiences: Experience[] = [
   {
     company: "AmberFlux",
     role: "Backend Applications Development Intern",
-    period: "Nov 2024 - Feb 2025",
+    period: "Nov 2024 - Present",
     responsibilities: [
       "Developed and maintained RESTful APIs for application-to-application integration, focusing on robust error handling and documentation",
       "Created test scripts and conducted API testing for both ideal and exception cases to ensure reliability",
