@@ -15,59 +15,73 @@ export function Projects() {
     {
       title: "VidVoyager",
       description:
-        "A Video Insight Generator that extracts key insights from videos using NLP, including Summarization/Q&A and Transcript Search for navigating YouTube video content.",
+        "AI-powered video insights engine that extracts key information from YouTube content using advanced NLP. Navigate hours of content in minutes with **smart summarization** and interactive Q&A.",
       link: "https://github.com/Zoyaaaaaaa/VidVoyager",
       image: "/images/vidvoyger.jpg",
     },
     {
-      title: "Odyssey Quest",
+      title: "AI Strategy & Use Case Research Agent",
       description:
-        "A travel website with seamless Mapbox integration. Features user authentication, reviews system, enhanced location-based features, and more.",
-      link: "https://odyssey-quest.onrender.com/listings",
-      image: "/images/OdysseyQuest.jpg",
+        "Intelligent research companion delivering actionable insights through OpenAI integration. Transform business decisions with **strategic AI solutions** for your organization.",
+      link: "https://github.com/Zoyaaaaaaa/Market-Research-AI-Agents",
+      image: "/images/MarketResearch.png",
+    },
+    {
+      title: "PneumoEase",
+      description:
+        "Medical diagnostic tool using deep learning to detect pneumonia from X-rays with exceptional accuracy. Empowering healthcare professionals with **AI-assisted diagnoses**.",
+      link: "https://github.com/Zoyaaaaaaa/PneumoniaDetection",
+      image: "/images/pneumoease.png",
     },
     {
       title: "UniFete",
       description:
-        "Comprehensive event coordination platform for educational institutions, with approval processes, event scheduling, and campus-wide student engagement.",
+        "Campus event ecosystem with intelligent scheduling and analytics. Streamlines institutional event management with **sophisticated approval workflows** for seamless operations.",
       link: "https://www.youtube.com/watch?v=LXQkMhHjCoQ",
       image: "/images/UniFete.jpg",
     },
     {
       title: "IntelliGraph",
       description:
-        "A Data Analysis Tool built with Streamlit, featuring PandasAI & Plotly integration for interactive exploration and statistical insights.",
+        "Data visualization platform combining PandasAI intelligence with Plotly graphics. Transform complex datasets into **interactive insights** through visual exploration.",
       link: "https://github.com/Zoyaaaaaaa/IntelliGraph",
       image: "/images/igraph.png",
     },
     {
       title: "Deal Detective",
       description:
-        "Provides real-time data insights for smarter shopping and product management, offering real-time updates and detailed product analysis.",
+        "Shopping intelligence agent featuring real-time price tracking and market analysis. Never overpay with **automated alerts** and competitor comparisons.",
       link: "https://deal-detective-tan.vercel.app/",
       image: "/images/DealDetective.png",
     },
     {
       title: "Editify",
       description:
-        "An image editing platform offering features like grayscale conversion, edge detection, resizing, and blurring, powered by OpenCV and Flask.",
+        "Professional image studio powered by OpenCV with artistic transformations. Beyond basic editing with **edge detection algorithms** and precision tools.",
       link: "https://github.com/Zoyaaaaaaa/Editify",
       image: "/images/editify.png",
     },
     {
+      title: "Odyssey Quest",
+      description:
+        "Immersive travel platform with Mapbox integration and community-curated reviews. Discover hidden gems with **intelligent location suggestions**.",
+      link: "https://odyssey-quest.onrender.com/listings",
+      image: "/images/OdysseyQuest.jpg",
+    },
+    {
       title: "Talk to Website",
       description:
-        "An AI-powered assistant to extract information from any website via natural language conversations, with semantic search and intelligent Q&A.",
+        "Conversational AI that transforms websites into interactive knowledge bases. Extract information with **semantic search** and natural language queries.",
       link: "https://github.com/Zoyaaaaaaa/TalkToWebsite",
       image: "/images/talktowebsite.jpg",
     },
     {
-      title: "AI Strategy & Use Case Research Agent",
-      description:
-        "A Streamlit app using OpenAI APIs to deliver industry insights, curated AI solutions, and resource discovery.",
-      link: "https://github.com/Zoyaaaaaaa/Market-Research-AI-Agents",
-      image: "/images/MarketResearch.png",
-    },
+      title: "Edumail",
+      description: 
+        "AI-powered email system for EdTech using LangChain and LangGraph. Intelligently categorizes and generates **contextual responses** for educational communication.",
+      link: "https://github.com/Zoyaaaaaaa/Edumail",
+      image: "/images/edumail.png",
+    }
   ];
 
   return (
@@ -90,9 +104,9 @@ export function Projects() {
                   as="p"
                   translateZ="60"
                   className="text-gray-300 text-sm max-w-sm mt-2 leading-relaxed"
-                >
-                  {project.description}
-                </CardItem>
+                  dangerouslySetInnerHTML={{
+                    __html: project.description.replace(/\*\*(.*?)\*\*/g, '<span class="font-medium text-sky-300">$1</span>')
+                  }} children={undefined}                />
                 <CardItem translateZ="100" className="w-full mt-4">
                   <div className="relative h-48 w-full overflow-hidden rounded-xl">
                     <Image
