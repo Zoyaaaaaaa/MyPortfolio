@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Zoya Hassan",
-  description: "Portofolio",
+  title: "AI Systems Architect | Production AI Systems",
+  description: "Designing production-grade hybrid retrieval systems, multi-agent orchestration, and enterprise-scale knowledge infrastructure.",
 };
 
 export default function RootLayout({
