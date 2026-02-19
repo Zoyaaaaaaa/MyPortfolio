@@ -1,17 +1,27 @@
-import Hero from '@/components/hero'
-import SystemDesign from '@/components/system-design'
-import CaseStudies from '@/components/case-studies'
-import Architecture from '@/components/architecture'
-import Contact from '@/components/contact'
+import { Header } from "@/components/Header"
+import HeroSection from "@/components/HeroSection"
+import { Projects } from "@/components/Projects"
+import { WorkExperience } from "@/components/WorkExperience"
+import { SkillsShowcase } from "@/components/Skills"
+import { Footer } from "@/components/Footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-50">
-      <Hero />
-      <SystemDesign />
-      <CaseStudies />
-      <Architecture />
-      <Contact />
+    <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      <Header />
+      <div id="home">
+        <HeroSection />
+      </div>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="experience">
+        <WorkExperience />
+      </section>
+      <section id="skills">
+        <SkillsShowcase />
+      </section>
+      <Footer />
     </main>
   )
 }
