@@ -2,6 +2,8 @@ import { Header } from "@/components/Header"
 import HeroSection from "@/components/HeroSection"
 import { Projects } from "@/components/Projects"
 import { WorkExperience } from "@/components/WorkExperience"
+import { Achievements } from "@/components/Achievements"
+import { Leadership } from "@/components/Leadership"
 import { SkillsShowcase } from "@/components/Skills"
 import { Footer } from "@/components/Footer"
 
@@ -17,6 +19,12 @@ export default function Home() {
       </section>
       <section id="projects">
         <Projects />
+      </section>
+      <section id="achievements">
+        <Achievements />
+      </section>
+      <section id="leadership">
+        <Leadership />
       </section>
       <section id="skills">
         <SkillsShowcase />
