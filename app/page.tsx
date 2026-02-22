@@ -12,11 +12,11 @@ export default function Home() {
       <div id="home">
         <HeroSection />
       </div>
-      <section id="projects">
-        <Projects />
-      </section>
       <section id="experience">
         <WorkExperience />
+      </section>
+      <section id="projects">
+        <Projects />
       </section>
       <section id="skills">
         <SkillsShowcase />

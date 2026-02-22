@@ -71,31 +71,34 @@ export function HeroSection() {
 
             <pre className="text-sm md:text-base text-gray-300 overflow-x-auto">
               <code>
-{`/* Backend AI Alchemist */
-// Turning logic into lifelike conversations
+{`// Agentic Systems Engineer
+// Building production AI agents that reason, act, and learn
 
-const backend = {
-  expertise: [
-    'LLM Integration',
-    'RAG Systems',
-    'Conversational AI',
-    'Vector Databases',
-    'Production APIs'
+const aiArchitect = {
+  specialization: [
+    'Multi-Agent Orchestration',
+    'Hybrid RAG Systems',
+    'LLM Memory Management',
+    'Agentic Workflows',
+    'Production AI Infrastructure'
   ],
   
-  philosophy: 'Code that scales,
-                Systems that think',
+  approach: {
+    reasoning: 'Structured thinking for complex problems',
+    action: 'Deterministic workflows with guardrails',
+    learning: 'Dynamic feedback loops and memory'
+  },
   
-  fuel: '☕ Coffee & Curiosity'
+  focus: 'Systems that scale, think strategically'
 }
 
 // Powered by
 const stack = [
-  'Next.js',
-  'Node.js',
-  'Vercel AI SDK',
+  'LangGraph',
   'LangChain',
-  'Vector DBs'
+  'Vertex AI',
+  'Qdrant',
+  'NestJS'
 ]`}
               </code>
             </pre>
