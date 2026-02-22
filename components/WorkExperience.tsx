@@ -5,7 +5,8 @@ import { Briefcase, Building, Clock, Star, Code, Database, Bot, Zap, Users, Tren
 
 interface CaseStudy {
   title: string
-  challenge: string
+  problem?: string
+  challenge?: string
   solution: string
   impact: string
 }
@@ -47,14 +48,12 @@ const experiences: Experience[] = [
         title: "AI Resume Builder on Vertex AI",
         problem: "Users struggled to align resumes with job descriptions and generate ATS-optimized resumes efficiently.",
         solution: "Designed and deployed end-to-end AI resume generation system using Gemini on Vertex AI. Engineered section-aware prompts maintaining resume-wide context without resending full data. Implemented selective context injection and optimized HTML-to-PDF rendering pipeline.",
-        challenge: "",
         impact: "Reduced PDF generation latency by 40%, improved AI response efficiency, and increased ATS alignment scores by 40%."
       },
       {
         title: "AI Interview Analysis Engine",
         problem: "Mock interviews lacked structured evaluation, long-session memory handling, and fast report generation.",
         solution: "Built full backend and AI pipeline in NestJS using Gemini on Vertex AI. Designed 4-phase interview framework (Resume-only and JD-aligned modes) with rolling memory summarization. Integrated Gemini caching and rolling summaries to manage 30-minute conversations efficiently.",
-        challenge: "",
         impact: "Reduced report generation time from 40–45 seconds to 15–20 seconds while maintaining contextual coherence across full interviews."
       }
     ]
@@ -83,28 +82,24 @@ const experiences: Experience[] = [
         title: "RBAC Authentication & AI Feedback Classification System",
         problem: "Enterprise platform required secure role-based access across 21+ APIs while classifying customer feedback into category, subcategory, and load code.",
         solution: "Engineered JWT/OAuth2-based RBAC authentication and authorization layer. Supported fine-tuning and RAG integration for feedback classification workflows.",
-        challenge: "",
         impact: "Secured multi-role platform access across services and enabled scalable AI-driven request categorization."
       },
       {
         title: "Enterprise Video Knowledge Retrieval System",
         problem: "Company training videos were not searchable, leading to repetitive employee queries and high support dependency.",
         solution: "Built end-to-end AI pipeline converting VTT transcripts into embeddings stored in Qdrant. Implemented hybrid RAG retrieval to fetch relevant transcript segments and return grounded answers.",
-        challenge: "",
         impact: "Reduced employee support dependency by approximately 30 hours/week and enabled instant, context-aware video query resolution."
       },
       {
         title: "Hybrid RAG Virtual Avatar Assistant",
         problem: "CEO manually handled repetitive interviews and candidate queries, consuming significant time weekly.",
         solution: "Engineered hybrid RAG pipeline using BM25 plus dense vector retrieval with cosine re-ranking. Implemented parallel search to reduce latency. Integrated real-time avatar delivery via DID.",
-        challenge: "",
         impact: "Reduced response latency from 8–9s to 2–3s and saved approximately 20 hours/week of executive manpower through automated AI interaction."
       },
       {
         title: "LangGraph Multi-Agent Documentation Engine",
         problem: "Manual generation of BRD, DRD, SRS, and API contracts was time-intensive and lacked contextual continuity.",
         solution: "Designed sequential multi-agent LangGraph system with summary memory and PostgreSQL persistence. Agents passed structured outputs across documentation stages while maintaining long-context coherence.",
-        challenge: "",
         impact: "Reduced documentation effort by 40% and automated end-to-end document generation from BRD to API contract."
       }
     ]
@@ -114,7 +109,7 @@ const experiences: Experience[] = [
     company: "BuildFastWithAI",
     role: "Full Stack Developer – Generative AI",
     period: "August 2024 – November 2024",
-    companyIcon: "🤖",
+    companyIcon: "",
     technologies: ["Vercel AI SDK", "Hugging Face", "Generative AI", "Conversational AI", "EdTech"],
     achievements: [
       "Shipped 7+ production AI applications",
