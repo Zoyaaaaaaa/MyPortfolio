@@ -430,6 +430,18 @@ export function Projects() {
       githubLink: "https://github.com/Zoyaaaaaaa/TalkToWebsite",
       quirkyNote: "💬 The internet finally talks back"
     },
+    {
+      title: "Indian Legal Assistant",
+      description:
+        "Fine-tuned Llama-3.2-3B using QLoRA on Indian constitutional and legal datasets. Delivers domain-specific legal understanding with optimized training reducing loss from 2.6 to 1.5 using Unsloth and TRL SFTTrainer.",
+      link: "https://huggingface.co/zo0302/indian_legal_bot",
+      externalLink: "https://huggingface.co/zo0302/indian_legal_bot",
+      image: "/images/legal-assistant.png",
+      category: "AI/ML",
+      featured: true,
+      githubLink: "https://huggingface.co/zo0302/indian_legal_bot",
+      quirkyNote: "⚖️ Legal expertise, model efficiency"
+    },
   ]
 
 
