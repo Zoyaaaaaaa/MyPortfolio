@@ -301,11 +301,11 @@ interface Project {
   category?: string
   featured?: boolean
   githubLink?: string
-  quirkyNote?:string
+  quirkyNote?: string
 }
 
 export function Projects() {
-    const projects: Project[] = [
+  const projects: Project[] = [
     {
       title: "Deal Detective",
       description:
@@ -316,7 +316,19 @@ export function Projects() {
       category: "E-commerce",
       featured: true,
       githubLink: "https://github.com/Zoyaaaaaaa/deal-detective",
-      quirkyNote: "💰 Saved users $10K+ already!"
+      quirkyNote: "💰 Saved users $5K+ already!"
+    },
+    {
+      title: "Indian Legal Assistant",
+      description:
+        "Fine-tuned Llama-3.2-3B using QLoRA on Indian constitutional and legal datasets. Delivers domain-specific legal understanding with optimized training reducing loss from 2.6 to 1.5 using Unsloth and TRL SFTTrainer.",
+      link: "https://huggingface.co/zo0302/indian_legal_bot",
+      externalLink: "https://huggingface.co/zo0302/indian_legal_bot",
+      image: "/images/legalbot_logo.jpg",
+      category: "AI/ML",
+      featured: true,
+      githubLink: "https://huggingface.co/zo0302/indian_legal_bot",
+      quirkyNote: "⚖️ Legal expertise, model efficiency"
     },
     {
       title: "InterviewMate",
@@ -525,7 +537,7 @@ export function Projects() {
                 >
                   {project.title}
                 </CardItem>
-                  {project.quirkyNote && (
+                {project.quirkyNote && (
                   <CardItem translateZ="30" className="mb-3">
                     <div className="text-sm text-purple-600 font-medium bg-purple-50 px-3 py-1 rounded-full border border-purple-100">
                       {project.quirkyNote}
@@ -544,7 +556,7 @@ export function Projects() {
                       /\*\*(.*?)\*\*/g,
                       '<span class="font-semibold text-sky-300">$1</span>'
                     ),
-                  }} children={undefined}                />
+                  }} children={undefined} />
 
                 {/* Project Image */}
                 <CardItem translateZ="100" className="w-full mb-6">
