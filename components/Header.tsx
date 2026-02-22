@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import { FloatingDock } from "./ui/floating-dock"
-import { Github, Home, Code2, Boxes, FileCode2, Mail, Linkedin, FileText, Sparkles, Zap, Brain } from "lucide-react"
+import { Github, Home, Code2, Boxes, FileCode2, Mail, Linkedin, FileText, Sparkles, Zap, Brain, Award, Users } from "lucide-react"
 
 export function Header() {
   const [activeSection, setActiveSection] = useState("home")
@@ -23,7 +23,7 @@ export function Header() {
   // Track active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "projects", "skills", "experience"]
+      const sections = ["home", "experience", "projects", "achievements", "leadership", "skills"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -98,6 +98,34 @@ export function Header() {
       ),
       href: "#experience",
       isActive: activeSection === "experience",
+    },
+    {
+      title: "Achievements",
+      icon: (
+        <Award
+          className={`h-full w-full transition-all duration-300 ${
+            activeSection === "achievements"
+              ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
+              : "text-neutral-400 group-hover:text-emerald-400"
+          }`}
+        />
+      ),
+      href: "#achievements",
+      isActive: activeSection === "achievements",
+    },
+    {
+      title: "Leadership",
+      icon: (
+        <Users
+          className={`h-full w-full transition-all duration-300 ${
+            activeSection === "leadership"
+              ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
+              : "text-neutral-400 group-hover:text-emerald-400"
+          }`}
+        />
+      ),
+      href: "#leadership",
+      isActive: activeSection === "leadership",
     },
     {
       title: "Contact",
