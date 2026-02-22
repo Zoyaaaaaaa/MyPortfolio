@@ -47,11 +47,10 @@ export function Header() {
       title: "Home",
       icon: (
         <Home
-          className={`h-full w-full transition-all duration-300 ${
-            activeSection === "home"
+          className={`h-full w-full transition-all duration-300 ${activeSection === "home"
               ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
               : "text-neutral-400 group-hover:text-emerald-400"
-          }`}
+            }`}
         />
       ),
       href: "#home",
@@ -61,11 +60,10 @@ export function Header() {
       title: "Projects",
       icon: (
         <Code2
-          className={`h-full w-full transition-all duration-300 ${
-            activeSection === "projects"
+          className={`h-full w-full transition-all duration-300 ${activeSection === "projects"
               ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
               : "text-neutral-400 group-hover:text-emerald-400"
-          }`}
+            }`}
         />
       ),
       href: "#projects",
@@ -75,11 +73,10 @@ export function Header() {
       title: "Skills",
       icon: (
         <Boxes
-          className={`h-full w-full transition-all duration-300 ${
-            activeSection === "skills"
+          className={`h-full w-full transition-all duration-300 ${activeSection === "skills"
               ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
               : "text-neutral-400 group-hover:text-emerald-400"
-          }`}
+            }`}
         />
       ),
       href: "#skills",
@@ -89,11 +86,10 @@ export function Header() {
       title: "Experience",
       icon: (
         <FileCode2
-          className={`h-full w-full transition-all duration-300 ${
-            activeSection === "experience"
+          className={`h-full w-full transition-all duration-300 ${activeSection === "experience"
               ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
               : "text-neutral-400 group-hover:text-emerald-400"
-          }`}
+            }`}
         />
       ),
       href: "#experience",
@@ -103,11 +99,10 @@ export function Header() {
       title: "Achievements",
       icon: (
         <Award
-          className={`h-full w-full transition-all duration-300 ${
-            activeSection === "achievements"
+          className={`h-full w-full transition-all duration-300 ${activeSection === "achievements"
               ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
               : "text-neutral-400 group-hover:text-emerald-400"
-          }`}
+            }`}
         />
       ),
       href: "#achievements",
@@ -117,11 +112,10 @@ export function Header() {
       title: "Leadership",
       icon: (
         <Users
-          className={`h-full w-full transition-all duration-300 ${
-            activeSection === "leadership"
+          className={`h-full w-full transition-all duration-300 ${activeSection === "leadership"
               ? "text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]"
               : "text-neutral-400 group-hover:text-emerald-400"
-          }`}
+            }`}
         />
       ),
       href: "#leadership",
@@ -168,7 +162,7 @@ export function Header() {
           <Sparkles className="absolute -top-0.5 -right-0.5 w-3 h-3 text-orange-400 opacity-0 group-hover:opacity-100 transition-all duration-300 animate-pulse" />
         </div>
       ),
-      href: "https://drive.google.com/file/d/1cPQipNNLyxyrf40sX9EdUCo19CN2Wpgq/view?usp=sharing",
+      href: "https://drive.google.com/file/d/1yv_eJ7seoRNxvS0by0SEdJ_mJUKBvUzP/view?usp=sharing",
       external: true,
     },
   ]
@@ -186,9 +180,8 @@ export function Header() {
 
       {/* Main floating dock */}
       <div
-        className={`fixed bottom-8 right-8 z-50 transition-all duration-500 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
-        }`}
+        className={`fixed bottom-8 right-8 z-50 transition-all duration-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
+          }`}
       >
         <FloatingDock
           items={links}
@@ -216,11 +209,10 @@ export function Header() {
           {["home", "projects", "skills", "experience"].map((section) => (
             <div
               key={section}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                activeSection === section
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSection === section
                   ? "bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]"
                   : "bg-gray-600 hover:bg-gray-500"
-              }`}
+                }`}
             />
           ))}
         </div>
