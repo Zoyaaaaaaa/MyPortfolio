@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AI Systems Architect | Production AI Systems",
-  description: "Designing production-grade hybrid retrieval systems, multi-agent orchestration, and enterprise-scale knowledge infrastructure.",
+  title: "Zoya Hassan | AI Systems Architect | Production AI & LLM Systems",
+  description: "AI Engineer specializing in Vertex AI, LangGraph, hybrid RAG systems, and multi-agent orchestration. Building production-grade AI systems at Cantilever Labs. CGPA 9.3/10, 3x Hackathon Winner, Research Paper Author.",
 };
 
 export default function RootLayout({

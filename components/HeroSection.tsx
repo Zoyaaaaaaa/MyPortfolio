@@ -13,28 +13,63 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 mb-4">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+            <span className="text-sm font-medium text-emerald-300">AI Systems Architect</span>
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
             Hello, I'm{" "}
-            <span className="bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">
-              Zoya Hassan.
+            <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Zoya Hassan
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 font-light">
-            I engineer backends that think, talk, and adapt.
+            Designing intelligent systems that reason, act, and learn.
           </p>
 
-          <p className="text-lg text-gray-400 leading-relaxed">
-            Backend architect meets AI whisperer — I design systems where APIs feel alive,
-            conversations flow naturally, and every feature is built to scale with brains and beauty.
+          <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
+            I build production-grade AI systems and enterprise-scale knowledge infrastructure. Specializing in hybrid RAG systems, multi-agent orchestration, and LLM memory management that power real-world intelligence.
           </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-6 py-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="space-y-1"
+            >
+              <p className="text-3xl font-bold text-emerald-400">9.3/10</p>
+              <p className="text-sm text-gray-400">CGPA</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="space-y-1"
+            >
+              <p className="text-3xl font-bold text-cyan-400">5+</p>
+              <p className="text-sm text-gray-400">Projects Shipped</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="space-y-1"
+            >
+              <p className="text-3xl font-bold text-blue-400">3x</p>
+              <p className="text-sm text-gray-400">Hackathon Winner</p>
+            </motion.div>
+          </div>
 
           {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex gap-4 pt-8"
+            className="flex flex-wrap gap-4 pt-8"
           >
             <motion.a
               href="#projects"
@@ -42,15 +77,15 @@ export function HeroSection() {
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 rounded-lg bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold hover:shadow-lg hover:shadow-emerald-500/50 transition-all"
             >
-              See My Work
+              View My Work
             </motion.a>
             <motion.a
               href="mailto:zoyah015@gmail.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 rounded-lg border border-gray-400 text-white font-semibold hover:bg-white/5 transition-all"
+              className="px-8 py-3 rounded-lg border border-emerald-500/30 text-white font-semibold hover:bg-emerald-500/10 transition-all"
             >
-              Get in Touch
+              Let&apos;s Connect
             </motion.a>
           </motion.div>
         </motion.div>
@@ -71,34 +106,34 @@ export function HeroSection() {
 
             <pre className="text-sm md:text-base text-gray-300 overflow-x-auto">
               <code>
-{`// Agentic Systems Engineer
-// Building production AI agents that reason, act, and learn
+{`// Production AI Systems Engineer
+// Cantilever Labs × AmberFlux
 
-const aiArchitect = {
-  specialization: [
-    'Multi-Agent Orchestration',
+const zoyaHassan = {
+  current: 'AI Engineer @ Cantilever Labs',
+  expertise: [
+    'Vertex AI & Gemini',
+    'LangGraph & LangChain',
     'Hybrid RAG Systems',
-    'LLM Memory Management',
-    'Agentic Workflows',
-    'Production AI Infrastructure'
+    'Multi-Agent Orchestration',
+    'NestJS Backend Architecture'
   ],
   
-  approach: {
-    reasoning: 'Structured thinking for complex problems',
-    action: 'Deterministic workflows with guardrails',
-    learning: 'Dynamic feedback loops and memory'
+  impact: {
+    interviewAnalysis: 'Reduced latency 40s → 15-20s',
+    resumeGeneration: 'Improved ATS alignment +40%',
+    hybridRAG: 'Cut search time 9s → 2-3s',
+    documentation: 'Saved 40+ hours/week'
   },
   
-  focus: 'Systems that scale, think strategically'
+  research: 'Paper accepted @ InterSYS 2026',
+  hackathons: '3x Winner',
+  gfg_ranking: '#1 Campus Coding Champion'
 }
 
-// Powered by
 const stack = [
-  'LangGraph',
-  'LangChain',
-  'Vertex AI',
-  'Qdrant',
-  'NestJS'
+  'Vertex AI', 'LangGraph', 'Qdrant',
+  'PostgreSQL', 'NestJS', 'Next.js'
 ]`}
               </code>
             </pre>

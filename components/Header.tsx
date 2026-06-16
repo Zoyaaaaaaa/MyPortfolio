@@ -23,7 +23,7 @@ export function Header() {
   // Track active section
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "experience", "projects", "achievements", "leadership", "skills"]
+      const sections = ["home", "experience", "projects", "achievements", "leadership", "skills", "education"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -206,7 +206,7 @@ export function Header() {
       {/* Progress indicator */}
       <div className="fixed bottom-2 right-8 z-40">
         <div className="flex items-center gap-1">
-          {["home", "projects", "skills", "experience"].map((section) => (
+          {["home", "projects", "skills", "experience", "education"].map((section) => (
             <div
               key={section}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${activeSection === section

@@ -5,6 +5,7 @@ import { WorkExperience } from "@/components/WorkExperience"
 import { Achievements } from "@/components/Achievements"
 import { Leadership } from "@/components/Leadership"
 import { SkillsShowcase } from "@/components/Skills"
+import { Education } from "@/components/Education"
 import { Footer } from "@/components/Footer"
 
 export default function Home() {
@@ -28,6 +29,9 @@ export default function Home() {
       </section>
       <section id="skills">
         <SkillsShowcase />
+      </section>
+      <section id="education">
+        <Education />
       </section>
       <Footer />
     </main>

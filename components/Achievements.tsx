@@ -5,27 +5,42 @@ import { Award, Trophy } from "lucide-react"
 const achievements = [
   {
     title: "Campus Coding Champion",
-    description: "Ranked #1 on the GeeksforGeeks leaderboard with 700+ problem-solving score",
+    description: "Ranked #1 on GeeksforGeeks Institute Leaderboard (TSEC) with 700+ problem-solving score",
     icon: Trophy,
   },
   {
-    title: "Hackathon Winner - HACKSYNC 2 (GDG)",
-    description: "Project SENTINEL, an offline AI/ML-powered multi-accessibility platform built in 24 hours",
+    title: "Research Paper Acceptance",
+    description: "Interactive Knowledge Graph Guided Retrieval Framework for Breast Cancer Care accepted at InterSYS 2026 (BITS Pilani Dubai)",
+    icon: Award,
+  },
+  {
+    title: "Hackathon Winner - HACKSYNC 2",
+    description: "SENTINEL: Offline AI/ML-powered multi-accessibility platform built in 24 hours",
     icon: Award,
   },
   {
     title: "Hackathon Winner - Need For Code 3.0",
-    description: "Developed SteadySteps AI, an assistive platform for rehabilitation centers and people in need",
+    description: "SteadySteps AI: Assistive platform for rehabilitation centers and individuals with accessibility needs",
     icon: Award,
   },
   {
     title: "Hackathon Winner - Codeissance",
-    description: "Built TravelEase AI, an accessibility platform with unique features for disabled individuals",
+    description: "TravelEase AI: Accessibility-first travel platform for differently-abled users",
+    icon: Trophy,
+  },
+  {
+    title: "Global Hackathon - Scroll Hacks Top 10",
+    description: "AI-powered financial aid platform with intelligent recommendations - secured Top 10 globally",
+    icon: Trophy,
+  },
+  {
+    title: "Guest Speaker",
+    description: "Delivered session on Programming NLP in Healthcare at Xavier Institute of Engineering (2025)",
     icon: Award,
   },
   {
-    title: "Global Hackathon - Top 10",
-    description: "Secured Top 10 in an international hackathon with an AI-powered financial aid app",
+    title: "Hackathon Judge",
+    description: "Evaluated AI and full-stack projects at Newbiethon 2025, mentoring developers with technical feedback",
     icon: Trophy,
   },
 ]

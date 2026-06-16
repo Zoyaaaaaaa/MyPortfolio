@@ -28,7 +28,7 @@ const experiences: Experience[] = [
     id: 1,
     company: "Cantilever Labs",
     role: "AI Engineer – LLM Systems & Backend Architecture",
-    period: "June 2025 – Present",
+    period: "Jul 2025 – Present",
     companyIcon: "",
     technologies: ["Vertex AI", "Gemini", "NestJS", "Google Cloud", "LLM Prompt Engineering", "Memory Systems", "HTML-PDF Rendering"],
     achievements: [
