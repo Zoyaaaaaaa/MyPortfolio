@@ -3,25 +3,102 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 5 5 5;
+    --foreground: 240 10 3;
+    --card: 15 15 15;
+    --card-foreground: 240 10 3;
+    --primary: 235 100 72;
+    --primary-foreground: 5 5 5;
+    --secondary: 271 100 70;
+    --secondary-foreground: 5 5 5;
+    --accent: 180 100 51;
+    --accent-foreground: 5 5 5;
+    --muted: 40 5 15;
+    --muted-foreground: 220 15 65;
+    --destructive: 0 84 60;
+    --destructive-foreground: 5 5 5;
+    --border: 25 10 20;
+    --input: 15 15 15;
+    --ring: 235 100 72;
+    --radius: 0.75rem;
+    --chart-1: 235 100 72;
+    --chart-2: 271 100 70;
+    --chart-3: 180 100 51;
+    --chart-4: 281 89 63;
+    --chart-5: 28 100 60;
+  }
+
   html {
     scroll-behavior: smooth;
+    background-color: hsl(var(--background));
   }
 
   body {
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-6xl mx-auto px-6 py-24;
+    @apply max-w-7xl mx-auto px-6 py-24;
   }
 
   .metric-badge {
-    @apply inline-block px-3 py-1 text-sm font-medium text-zinc-600 bg-zinc-100 rounded border border-zinc-200;
+    @apply inline-block px-4 py-2 text-xs font-semibold uppercase tracking-wider text-accent bg-accent/15 rounded-full border border-accent/40 shadow-sm shadow-accent/10;
   }
 
   .link-subtle {
-    @apply text-zinc-700 hover:text-zinc-900 transition-colors;
+    @apply text-muted-foreground hover:text-accent transition-colors duration-300;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-xl bg-card/40 border border-white/10 rounded-xl shadow-2xl;
+  }
+
+  .glass-effect-subtle {
+    @apply backdrop-blur-lg bg-card/20 border border-white/5 rounded-lg shadow-lg;
+  }
+
+  .glow-effect {
+    @apply shadow-lg shadow-primary/25 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .gradient-text-subtle {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .aurora-gradient {
+    @apply bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/20;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .elegant-border {
+    @apply border border-border hover:border-primary/50 transition-all duration-500 ease-out;
+  }
+
+  .premium-card {
+    @apply glass-effect elegant-border relative;
+  }
+
+  .section-header {
+    @apply text-5xl md:text-6xl font-bold gradient-text leading-tight;
+  }
+
+  .section-subheader {
+    @apply text-lg text-muted-foreground leading-relaxed max-w-2xl;
+  }
+
+  .subtle-glow {
+    @apply shadow-lg shadow-primary/10 transition-all duration-300;
   }
 }
