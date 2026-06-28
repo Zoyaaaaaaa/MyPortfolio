@@ -62,12 +62,12 @@ export function Leadership() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 mb-6">
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/15 border border-primary/40 mb-8">
             <Star className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Leadership Impact</span>
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">Leadership Impact</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">Leadership & Community</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl">
+          <h2 className="section-header mb-6">Leadership & Community</h2>
+          <p className="section-subheader">
             Driving innovation and building thriving tech communities through strategic leadership and mentorship
           </p>
         </motion.div>
@@ -87,28 +87,26 @@ export function Leadership() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ x: 8 }}
-                className="group relative glass-effect border-accent/30 rounded-xl p-8 overflow-hidden"
+                whileHover={{ x: 6 }}
+                className="premium-card group rounded-2xl p-8 overflow-hidden"
               >
                 {/* Left gradient accent */}
-                <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${role.accentColor} opacity-0 group-hover:opacity-100 smooth-transition`} />
+                <div className={`absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b ${role.accentColor} opacity-0 group-hover:opacity-100 smooth-transition`} />
 
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="flex items-start justify-between gap-6 mb-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className={`text-3xl font-bold ${role.accentText}`}>{role.organization}</h3>
-                      </div>
-                      <p className="text-lg text-foreground font-semibold mb-2">{role.title}</p>
-                      <p className="text-sm text-muted-foreground italic">{role.impact}</p>
+                      <h3 className={`text-3xl font-bold ${role.accentText} mb-3`}>{role.organization}</h3>
+                      <p className="text-lg text-foreground font-semibold mb-3">{role.title}</p>
+                      <p className="text-sm text-muted-foreground font-light">{role.impact}</p>
                     </div>
-                    <div className="p-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg group-hover:from-primary/30 group-hover:to-secondary/30 smooth-transition flex-shrink-0">
+                    <div className="p-4 bg-gradient-to-br from-primary/15 to-secondary/15 rounded-lg group-hover:from-primary/25 group-hover:to-secondary/25 smooth-transition flex-shrink-0">
                       <IconComponent className="w-8 h-8 text-primary" />
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-8 font-light">
                     {role.description}
                   </p>
 
@@ -118,7 +116,7 @@ export function Leadership() {
                       <motion.div
                         key={hIdx}
                         whileHover={{ y: -2 }}
-                        className="px-4 py-3 bg-card/60 border border-accent/20 rounded-lg text-sm font-medium text-foreground text-center hover:border-accent/50 smooth-transition"
+                        className="px-4 py-3 bg-card/40 border border-white/8 rounded-lg text-sm font-medium text-foreground text-center hover:border-accent/40 smooth-transition"
                       >
                         {highlight}
                       </motion.div>

@@ -77,12 +77,12 @@ export function Achievements() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 mb-6">
-            <Flame className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Recognized Excellence</span>
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-accent/15 border border-accent/40 mb-8">
+            <Flame className="w-4 h-4 text-accent" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-accent">Excellence Recognized</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">Achievements</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl">
+          <h2 className="section-header mb-6">Achievements</h2>
+          <p className="section-subheader">
             Recognized for innovation, competitive excellence, and impactful solutions in AI and accessibility
           </p>
         </motion.div>
@@ -101,40 +101,40 @@ export function Achievements() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ y: -8 }}
-                className="group relative glass-effect border-accent/30 rounded-xl p-6 overflow-hidden h-full"
+                whileHover={{ y: -6 }}
+                className="premium-card group rounded-2xl p-8 overflow-hidden h-full"
               >
                 {/* Top gradient accent */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-0 group-hover:opacity-100 smooth-transition" />
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-primary/0 via-accent to-primary/0 opacity-0 group-hover:opacity-100 smooth-transition" />
 
                 {/* Background glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 smooth-transition" />
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="flex items-start justify-between gap-3 mb-4">
-                    <div className="p-3 bg-primary/20 rounded-lg group-hover:bg-primary/30 smooth-transition">
+                  <div className="flex items-start justify-between gap-4 mb-6">
+                    <div className="p-3 bg-primary/15 rounded-lg group-hover:bg-primary/25 smooth-transition">
                       <IconComponent className="w-6 h-6 text-primary" />
                     </div>
-                    <span className="inline-block px-3 py-1 text-xs font-semibold text-accent bg-accent/20 rounded-full">
+                    <span className="inline-block px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-accent bg-accent/15 rounded-full border border-accent/40">
                       {achievement.badge}
                     </span>
                   </div>
 
-                  <span className="inline-block text-xs font-medium text-muted-foreground mb-3 uppercase tracking-wider">
+                  <span className="inline-block text-xs font-semibold text-muted-foreground mb-4 uppercase tracking-widest opacity-70">
                     {achievement.category}
                   </span>
 
-                  <h3 className="text-lg font-bold text-foreground mb-3 leading-snug">
+                  <h3 className="text-xl font-bold text-foreground mb-4 leading-snug">
                     {achievement.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed font-light">
                     {achievement.description}
                   </p>
                 </div>
 
                 {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full smooth-transition" />
+                <div className="absolute bottom-0 left-0 w-0 h-px bg-gradient-to-r from-primary to-accent group-hover:w-full smooth-transition" />
               </motion.div>
             )
           })}

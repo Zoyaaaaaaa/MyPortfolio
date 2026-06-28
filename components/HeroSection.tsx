@@ -49,24 +49,24 @@ export function HeroSection() {
                 <span className="metric-badge">AI Systems Architect</span>
               </motion.div>
 
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight space-y-2">
-                <div className="text-foreground">Hello, I&apos;m</div>
-                <div className="gradient-text">Zoya Hassan</div>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter space-y-2">
+                <div className="text-foreground font-light">Hello, I&apos;m</div>
+                <div className="gradient-text font-bold">Zoya Hassan</div>
               </h1>
             </div>
 
             <motion.p
               variants={itemVariants}
-              className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed"
+              className="text-2xl md:text-3xl text-foreground font-light leading-relaxed tracking-wide"
             >
-              I engineer backends that think, talk, and adapt.
+              Crafting intelligent systems that scale with elegance.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg text-muted-foreground leading-relaxed max-w-lg"
+              className="text-lg text-muted-foreground leading-relaxed max-w-lg font-light"
             >
-              Backend architect meets AI whisperer — I design systems where APIs feel alive, conversations flow naturally, and every feature is built to scale with brains and beauty.
+              I specialize in designing production-grade AI systems and multi-agent architectures that combine sophisticated reasoning with beautiful UX.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -76,19 +76,19 @@ export function HeroSection() {
             >
               <motion.a
                 href="#projects"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 rounded-lg bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold glow-effect text-center"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-primary to-secondary text-primary-foreground font-medium tracking-wide glow-effect text-center smooth-transition"
               >
-                See My Work
+                Explore My Work
               </motion.a>
               <motion.a
                 href="mailto:zoyah015@gmail.com"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 rounded-lg border border-accent/50 text-accent font-semibold hover:bg-accent/10 smooth-transition text-center"
+                whileHover={{ scale: 1.02, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-3.5 rounded-lg border border-accent/40 text-foreground font-medium tracking-wide hover:bg-accent/10 hover:border-accent/60 smooth-transition text-center"
               >
-                Get in Touch
+                Let&apos;s Connect
               </motion.a>
             </motion.div>
 

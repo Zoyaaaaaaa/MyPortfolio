@@ -47,7 +47,7 @@
   }
 
   .metric-badge {
-    @apply inline-block px-4 py-2 text-sm font-semibold text-accent-foreground bg-accent rounded border border-accent/50 shadow-lg shadow-accent/20;
+    @apply inline-block px-4 py-2 text-xs font-semibold uppercase tracking-wider text-accent bg-accent/15 rounded-full border border-accent/40 shadow-sm shadow-accent/10;
   }
 
   .link-subtle {
@@ -55,22 +55,50 @@
   }
 
   .glass-effect {
-    @apply backdrop-blur-md bg-card/30 border border-border/50 rounded-lg shadow-xl;
+    @apply backdrop-blur-xl bg-card/40 border border-white/10 rounded-xl shadow-2xl;
+  }
+
+  .glass-effect-subtle {
+    @apply backdrop-blur-lg bg-card/20 border border-white/5 rounded-lg shadow-lg;
   }
 
   .glow-effect {
-    @apply shadow-lg shadow-primary/30 transition-all duration-300;
+    @apply shadow-lg shadow-primary/25 transition-all duration-300;
   }
 
   .gradient-text {
     @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
   }
 
+  .gradient-text-subtle {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
   .aurora-gradient {
-    @apply bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20;
+    @apply bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/20;
   }
 
   .smooth-transition {
     @apply transition-all duration-500 ease-out;
+  }
+
+  .elegant-border {
+    @apply border border-white/8 hover:border-white/15 transition-all duration-500 ease-out;
+  }
+
+  .premium-card {
+    @apply glass-effect elegant-border relative;
+  }
+
+  .section-header {
+    @apply text-5xl md:text-6xl font-bold gradient-text leading-tight;
+  }
+
+  .section-subheader {
+    @apply text-lg text-muted-foreground leading-relaxed max-w-2xl;
+  }
+
+  .subtle-glow {
+    @apply shadow-lg shadow-primary/10 transition-all duration-300;
   }
 }
