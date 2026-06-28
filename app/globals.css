@@ -83,7 +83,7 @@
   }
 
   .elegant-border {
-    @apply border border-white/8 hover:border-white/15 transition-all duration-500 ease-out;
+    @apply border border-border hover:border-primary/50 transition-all duration-500 ease-out;
   }
 
   .premium-card {

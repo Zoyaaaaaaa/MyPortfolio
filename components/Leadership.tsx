@@ -116,7 +116,7 @@ export function Leadership() {
                       <motion.div
                         key={hIdx}
                         whileHover={{ y: -2 }}
-                        className="px-4 py-3 bg-card/40 border border-white/8 rounded-lg text-sm font-medium text-foreground text-center hover:border-accent/40 smooth-transition"
+                        className="px-4 py-3 bg-card/40 border border-border rounded-lg text-sm font-medium text-foreground text-center hover:border-accent/40 smooth-transition"
                       >
                         {highlight}
                       </motion.div>
