@@ -55,7 +55,49 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+  		animation: {
+  			'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+  			'float': 'float 6s ease-in-out infinite',
+  			'shimmer': 'shimmer 2s linear infinite',
+  			'slide-down': 'slide-down 0.5s ease-out',
+  			'fade-in': 'fade-in 0.5s ease-out',
+  			'scale-in': 'scale-in 0.5s ease-out',
+  			'aurora': 'aurora 8s ease-in-out infinite',
+  		},
+  		keyframes: {
+  			'pulse-glow': {
+  				'0%, 100%': { opacity: '1', boxShadow: '0 0 20px hsl(var(--primary))' },
+  				'50%': { opacity: '.8', boxShadow: '0 0 40px hsl(var(--primary))' },
+  			},
+  			'float': {
+  				'0%, 100%': { transform: 'translateY(0px)' },
+  				'50%': { transform: 'translateY(-20px)' },
+  			},
+  			'shimmer': {
+  				'0%': { backgroundPosition: '1000% 0' },
+  				'100%': { backgroundPosition: '-1000% 0' },
+  			},
+  			'slide-down': {
+  				'0%': { opacity: '0', transform: 'translateY(-10px)' },
+  				'100%': { opacity: '1', transform: 'translateY(0)' },
+  			},
+  			'fade-in': {
+  				'0%': { opacity: '0' },
+  				'100%': { opacity: '1' },
+  			},
+  			'scale-in': {
+  				'0%': { opacity: '0', transform: 'scale(0.95)' },
+  				'100%': { opacity: '1', transform: 'scale(1)' },
+  			},
+  			'aurora': {
+  				'0%, 100%': { backgroundPosition: '0% 50%' },
+  				'50%': { backgroundPosition: '100% 50%' },
+  			},
+  		},
+  		backgroundSize: {
+  			'200%': '200% 200%',
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],

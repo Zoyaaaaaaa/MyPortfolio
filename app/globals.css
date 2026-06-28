@@ -3,25 +3,74 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 5 5 5;
+    --foreground: 240 10 3;
+    --card: 15 15 15;
+    --card-foreground: 240 10 3;
+    --primary: 235 100 72;
+    --primary-foreground: 5 5 5;
+    --secondary: 271 100 70;
+    --secondary-foreground: 5 5 5;
+    --accent: 180 100 51;
+    --accent-foreground: 5 5 5;
+    --muted: 40 5 15;
+    --muted-foreground: 220 15 65;
+    --destructive: 0 84 60;
+    --destructive-foreground: 5 5 5;
+    --border: 25 10 20;
+    --input: 15 15 15;
+    --ring: 235 100 72;
+    --radius: 0.75rem;
+    --chart-1: 235 100 72;
+    --chart-2: 271 100 70;
+    --chart-3: 180 100 51;
+    --chart-4: 281 89 63;
+    --chart-5: 28 100 60;
+  }
+
   html {
     scroll-behavior: smooth;
+    background-color: hsl(var(--background));
   }
 
   body {
     font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-6xl mx-auto px-6 py-24;
+    @apply max-w-7xl mx-auto px-6 py-24;
   }
 
   .metric-badge {
-    @apply inline-block px-3 py-1 text-sm font-medium text-zinc-600 bg-zinc-100 rounded border border-zinc-200;
+    @apply inline-block px-4 py-2 text-sm font-semibold text-accent-foreground bg-accent rounded border border-accent/50 shadow-lg shadow-accent/20;
   }
 
   .link-subtle {
-    @apply text-zinc-700 hover:text-zinc-900 transition-colors;
+    @apply text-muted-foreground hover:text-accent transition-colors duration-300;
+  }
+
+  .glass-effect {
+    @apply backdrop-blur-md bg-card/30 border border-border/50 rounded-lg shadow-xl;
+  }
+
+  .glow-effect {
+    @apply shadow-lg shadow-primary/30 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .aurora-gradient {
+    @apply bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-500 ease-out;
   }
 }

@@ -448,30 +448,30 @@ export function Projects() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      "AI/ML": "from-emerald-500/20 to-blue-500/20 border-emerald-500/30",
-      Healthcare: "from-green-500/20 to-emerald-500/20 border-green-500/30",
-      "Web App": "from-blue-500/20 to-cyan-500/20 border-blue-500/30",
-      "Data Viz": "from-emerald-500/20 to-teal-500/20 border-emerald-500/30",
-      "E-commerce": "from-blue-500/20 to-emerald-500/20 border-blue-500/30",
-      EdTech: "from-cyan-500/20 to-blue-500/20 border-cyan-500/30",
-      "Image Processing": "from-teal-500/20 to-emerald-500/20 border-teal-500/30",
-      Travel: "from-emerald-500/20 to-blue-500/20 border-emerald-500/30",
+      "AI/ML": "from-primary/20 to-secondary/20 border-primary/30",
+      Healthcare: "from-accent/20 to-primary/20 border-accent/30",
+      "Web App": "from-secondary/20 to-accent/20 border-secondary/30",
+      "Data Viz": "from-primary/20 to-accent/20 border-primary/30",
+      "E-commerce": "from-secondary/20 to-primary/20 border-secondary/30",
+      EdTech: "from-accent/20 to-secondary/20 border-accent/30",
+      "Image Processing": "from-accent/20 to-primary/20 border-accent/30",
+      Travel: "from-primary/20 to-secondary/20 border-primary/30",
     }
-    return colors[category as keyof typeof colors] || "from-gray-500/20 to-slate-500/20 border-gray-500/30"
+    return colors[category as keyof typeof colors] || "from-muted/20 to-muted-foreground/20 border-muted/30"
   }
 
   const getCategoryTextColor = (category: string) => {
     const colors = {
-      "AI/ML": "text-emerald-400",
-      Healthcare: "text-green-400",
-      "Web App": "text-blue-400",
-      "Data Viz": "text-emerald-400",
-      "E-commerce": "text-blue-400",
-      EdTech: "text-cyan-400",
-      "Image Processing": "text-teal-400",
-      Travel: "text-emerald-400",
+      "AI/ML": "text-primary",
+      Healthcare: "text-accent",
+      "Web App": "text-secondary",
+      "Data Viz": "text-primary",
+      "E-commerce": "text-secondary",
+      EdTech: "text-accent",
+      "Image Processing": "text-accent",
+      Travel: "text-primary",
     }
-    return colors[category as keyof typeof colors] || "text-gray-400"
+    return colors[category as keyof typeof colors] || "text-muted-foreground"
   }
 
   return (
@@ -479,14 +479,14 @@ export function Projects() {
       <div className="container mx-auto px-4 py-16">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-blue-500/10 border border-emerald-500/20 mb-6">
-            <Zap className="w-4 h-4 text-emerald-400" />
-            <span className="text-sm font-medium text-emerald-300">Featured Work</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 mb-6">
+            <Zap className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Featured Work</span>
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-emerald-400 mb-6">Featured Projects</h2>
+          <h2 className="text-5xl md:text-6xl font-bold gradient-text mb-6">Featured Projects</h2>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             A collection of innovative solutions spanning AI, healthcare, and web technologies
           </p>
         </div>
@@ -498,17 +498,16 @@ export function Projects() {
               <CardBody
                 className={`
                 relative group/card w-full h-auto rounded-2xl p-6 border backdrop-blur-sm
-                bg-gradient-to-br from-black/90 via-gray-950/90 to-black/90
-                border-gray-800 hover:border-gray-700/50
+                glass-effect
                 transition-all duration-500 ease-out
-                hover:shadow-2xl hover:shadow-emerald-500/10
-                ${project.featured ? "ring-1 ring-emerald-500/20" : ""}
+                glow-effect
+                ${project.featured ? "ring-1 ring-primary/20" : ""}
               `}
               >
                 {/* Featured Badge */}
                 {project.featured && (
                   <CardItem translateZ="10" className="absolute -top-2 -right-2">
-                    <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 text-white text-xs font-medium">
+                    <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs font-medium">
                       <Star className="w-3 h-3 fill-current" />
                       Featured
                     </div>
@@ -533,7 +532,7 @@ export function Projects() {
                 {/* Project Title */}
                 <CardItem
                   translateZ="50"
-                  className="text-2xl font-bold text-emerald-400 mb-3 group-hover/card:text-emerald-300 transition-colors duration-300"
+                  className="text-2xl font-bold text-primary mb-3 group-hover/card:text-accent smooth-transition"
                 >
                   {project.title}
                 </CardItem>
@@ -550,30 +549,30 @@ export function Projects() {
                 <CardItem
                   as="div"
                   translateZ="60"
-                  className="text-gray-300 text-sm leading-relaxed mb-6"
+                  className="text-muted-foreground text-sm leading-relaxed mb-6"
                   dangerouslySetInnerHTML={{
                     __html: project.description.replace(
                       /\*\*(.*?)\*\*/g,
-                      '<span class="font-semibold text-sky-300">$1</span>'
+                      '<span class="font-semibold text-accent">$1</span>'
                     ),
                   }} children={undefined} />
 
                 {/* Project Image */}
                 <CardItem translateZ="100" className="w-full mb-6">
-                  <div className="relative h-48 w-full overflow-hidden rounded-xl bg-gradient-to-br from-gray-800 to-gray-900">
+                  <div className="relative h-48 w-full overflow-hidden rounded-xl bg-gradient-to-br from-card to-muted">
                     <Image
                       src={project.image || "/placeholder.svg"}
                       alt={project.title}
                       fill
-                      className="object-cover transition-all duration-700 group-hover/card:scale-110 group-hover/card:brightness-110"
+                      className="object-cover smooth-transition group-hover/card:scale-110 group-hover/card:brightness-110"
                     />
                     {/* Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent opacity-0 group-hover/card:opacity-100 smooth-transition" />
 
                     {/* Hover Icon */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-300">
-                      <div className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-                        <ExternalLink className="w-6 h-6 text-white" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 smooth-transition">
+                      <div className="p-3 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20">
+                        <ExternalLink className="w-6 h-6 text-primary" />
                       </div>
                     </div>
                   </div>
@@ -586,10 +585,10 @@ export function Projects() {
                     as={Link}
                     href={project.link}
                     target="_blank"
-                    className="group/button flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-blue-600 hover:from-emerald-500 hover:to-blue-500 text-white text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25"
+                    className="group/button flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary to-secondary text-primary-foreground text-sm font-medium glow-effect hover:shadow-lg"
                   >
                     <span>View Project</span>
-                    <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/button:translate-x-0.5" />
+                    <ExternalLink className="w-4 h-4 smooth-transition group-hover/button:translate-x-0.5" />
                   </CardItem>
 
                   {project.githubLink && (
@@ -598,7 +597,7 @@ export function Projects() {
                       as={Link}
                       href={project.githubLink}
                       target="_blank"
-                      className="p-3 rounded-xl bg-gray-800/50 hover:bg-gray-700/50 border border-gray-700/50 hover:border-gray-600/50 text-gray-400 hover:text-white transition-all duration-300"
+                      className="p-3 rounded-xl bg-card/50 hover:bg-card/80 border border-border/50 hover:border-border text-muted-foreground hover:text-accent smooth-transition"
                     >
                       <Github className="w-4 h-4" />
                     </CardItem>
@@ -606,7 +605,7 @@ export function Projects() {
                 </div>
 
                 {/* Glow Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/5 to-blue-500/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/5 to-secondary/5 opacity-0 group-hover/card:opacity-100 smooth-transition pointer-events-none" />
               </CardBody>
             </CardContainer>
           ))}
@@ -614,9 +613,9 @@ export function Projects() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-600/50 text-gray-300 hover:text-white transition-colors duration-300">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-effect border-accent/30 text-muted-foreground hover:text-foreground smooth-transition">
             <span className="text-sm">More projects coming soon</span>
-            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-emerald-400 to-blue-400 animate-pulse" />
+            <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse" />
           </div>
         </div>
       </div>
