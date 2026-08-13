@@ -7,6 +7,7 @@ const chapters = [
   ["SYSTEMS", "systems"],
   ["PROOF", "proof"],
   ["BATTLES", "battles"],
+  ["ROOMS", "rooms"],
   ["SIGNAL", "signal"],
   ["FIELD", "field"],
   ["GRAPH", "graph"],
@@ -21,6 +22,19 @@ const projects = [
   ["VIDVOYAGER", "video insights engine", "TRANSCRIBE → RETRIEVE → SUMMARIZE → ASK", "AI / ML", "https://github.com/Zoyaaaaaaa/VidVoyager"],
   ["PNEUMOEASE", "computer vision for pneumonia detection", "IMAGE → INFERENCE → CONFIDENCE → DECISION", "Healthcare", "https://github.com/Zoyaaaaaaa/PneumoniaDetection"],
 ]
+
+const events = [
+  ["GUEST SPEAKER", "Programming NLP in Healthcare", "Xavier Institute of Engineering", "2025"],
+  ["TECHNICAL MENTOR", "TSEC HACKS 2026", "400+ participants · 24-hour build sprint", "2026"],
+  ["JUDGE", "Newbiethon", "AI and full-stack project reviews", "2025"],
+  ["WORKSHOP LEAD", "TSEC CodeCell / Devs Club", "200+ students reached", "2024—25"],
+] as const
+
+const socialLinks = {
+  github: "https://github.com/Zoyaaaaaaa",
+  linkedin: "https://www.linkedin.com/in/zoya-hassan-688470271/",
+  email: "mailto:zoyah015@gmail.com",
+} as const
 
 const experiences = [
   ["AI SYSTEMS", "Building production-grade retrieval, agent orchestration, and knowledge infrastructure.", "2024—NOW", "latency ↓ 40%", "agents 06"],
@@ -77,7 +91,7 @@ export function CognitivePortfolio() {
 
       <main>
         <section id="origin" className="hero chapter-section">
-          <div className="hero-copy"><p className="eyebrow"><i /> SYSTEM ONLINE / Z//CORE</p><h1>Building systems<br /><em>that think</em><br />with intent.</h1><p className="hero-thesis">I design intelligent infrastructure for the space between a question and a useful answer — where retrieval becomes memory, and software becomes a collaborator.</p><div className="hero-actions"><a className="button-primary" href="#systems">TRACE THE SYSTEM <span>↓</span></a><button className="button-quiet" onClick={() => setThinkMode(true)}>HOW I THINK <span>↗</span></button></div></div>
+          <div className="hero-copy"><p className="eyebrow"><i /> SYSTEM ONLINE / Z//CORE</p><h1>Building systems<br /><em>that think</em><br />with intent.</h1><p className="hero-thesis">I design intelligent infrastructure for the space between a question and a useful answer — where retrieval becomes memory, and software becomes a collaborator.</p><div className="hero-actions"><a className="button-primary" href="#systems">TRACE THE SYSTEM <span>↓</span></a><button className="button-quiet" onClick={() => setThinkMode(true)}>HOW I THINK <span>↗</span></button></div><nav className="social-links" aria-label="Social links"><a href={socialLinks.github} target="_blank" rel="noreferrer">GitHub ↗</a><a href={socialLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href={socialLinks.email}>Email ↗</a></nav></div>
           <div className="field-wrap"><ComputationalField /><div className="field-label field-label-a">ACTIVE / 03</div><div className="field-label field-label-b">MEMORY LAYER<br /><b>STABLE</b></div></div>
           <div className="hero-footer"><span>01 — ORIGIN</span><span>SCROLL TO INSPECT <b>↓</b></span><span>NEW DELHI / 28.61° N</span></div>
         </section>
@@ -87,6 +101,8 @@ export function CognitivePortfolio() {
         <section id="proof" className="chapter-section section-pad dark-section"><div className="section-kicker"><span>03</span><span>THE LAB / SELECTED SYSTEMS</span><span>11 BUILDS</span></div><div className="section-intro"><h2>Proof, in<br /><em>working systems.</em></h2><p>Each project is a small argument: intelligence is only useful when it changes what someone can do.</p></div><div className="project-list">{projects.map(([name, desc, flow, category], i) => <a className="project-row" href={projects[i][4]} target="_blank" rel="noreferrer" key={name}><span className="project-index">0{i + 1}</span><div><h3>{name}</h3><p>{desc}</p></div><div className="project-flow">{flow}</div><span className="project-category">{category}</span><span className="project-arrow">↗</span></a>)}</div></section>
 
         <section id="battles" className="chapter-section section-pad"><div className="section-kicker"><span>04</span><span>BATTLE LOGS</span><span>MISSION RECORDS</span></div><div className="battle-grid">{[["01", "HACKSYNC", "1ST PLACE", "AI / SYSTEMS"], ["02", "SIH 2024", "NATIONAL FINALIST", "PROBLEM SOLVING"], ["03", "CODECELL", "TOP 3", "BUILD / LEAD"], ["04", "RESEARCH", "PUBLISHED", "KNOWLEDGE"], ["05", "OPEN SOURCE", "ACTIVE", "COMMUNITY"]].map(([n, title, result, type]) => <div className="battle-record" key={n}><span>{n}</span><h3>{title}</h3><b>{result}</b><small>{type}</small></div>)}</div></section>
+
+        <section id="rooms" className="chapter-section section-pad rooms-section"><div className="section-kicker"><span>05</span><span>ROOMS / SPEAKING & EVENTS</span><span>LIVE KNOWLEDGE</span></div><div className="section-intro"><h2>Ideas get<br /><em>louder together.</em></h2><p>From a healthcare NLP session to a 24-hour hackathon floor, I like technical spaces that make people more confident builders.</p></div><div className="event-list">{events.map(([type, title, place, year]) => <article className="event-row" key={title}><span>{year}</span><div><small>{type}</small><h3>{title}</h3><p>{place}</p></div><b>↗</b></article>)}</div></section>
 
         <section id="signal" className="chapter-section section-pad signal-section"><div className="section-kicker"><span>05</span><span>SIGNAL / WRITING</span><span>IDEAS IN PUBLIC</span></div><div className="signal-grid"><h2>Thinking is<br /><em>an interface.</em></h2><div className="writing-list"><a href="https://medium.com" target="_blank" rel="noreferrer"><span>01 / ESSAY</span><strong>What should an AI system remember?</strong><small>Medium ↗</small></a><a href="https://medium.com" target="_blank" rel="noreferrer"><span>02 / FIELD NOTE</span><strong>From prompt to pipeline: making agents useful.</strong><small>Medium ↗</small></a><a href="https://medium.com" target="_blank" rel="noreferrer"><span>03 / RESEARCH</span><strong>Retrieval is not memory. A distinction.</strong><small>Medium ↗</small></a></div></div></section>
 
@@ -98,7 +114,7 @@ export function CognitivePortfolio() {
 
         <section id="now" className="chapter-section section-pad"><div className="section-kicker"><span>09</span><span>NOW / AUGUST 2026</span><span>STATUS: CURIOUS</span></div><div className="now-grid"><h2>Currently<br /><em>following the thread.</em></h2><div><p>Exploring how memory changes the shape of an agent — and how we can make that shape legible to the people using it.</p><span className="status-line"><i /> AVAILABLE FOR THE RIGHT PROBLEM</span></div></div></section>
 
-        <section id="channel" className="channel chapter-section section-pad"><div className="section-kicker"><span>10</span><span>OPEN CHANNEL</span><span>TRANSMISSION READY</span></div><div className="channel-content"><h2>Have a question<br />worth <em>building around?</em></h2><a className="mail-cta" href="mailto:zoya@example.com"><span>zoya@cognitivesystem.dev</span><b>SEND TRANSMISSION ↗</b></a></div><footer><span>Z//CORE — END OF CURRENT CONTEXT</span><span>BUILT WITH INTENT / 2026</span></footer></section>
+        <section id="channel" className="channel chapter-section section-pad"><div className="section-kicker"><span>10</span><span>OPEN CHANNEL</span><span>TRANSMISSION READY</span></div><div className="channel-content"><h2>Have a question<br />worth <em>building around?</em></h2><a className="mail-cta" href={socialLinks.email}><span>zoyah015@gmail.com</span><b>SEND TRANSMISSION ↗</b></a><div className="contact-links"><a href={socialLinks.github} target="_blank" rel="noreferrer">GitHub / Zoyaaaaaaa ↗</a><a href={socialLinks.linkedin} target="_blank" rel="noreferrer">LinkedIn / Zoya Hassan ↗</a></div></div><footer><span>Z//CORE — END OF CURRENT CONTEXT</span><span>BUILT WITH INTENT / 2026</span></footer></section>
       </main>
 
       {thinkMode && <div className="think-overlay"><button className="close-think" onClick={() => setThinkMode(false)}>ESC / CLOSE ×</button><div className="think-map"><p className="eyebrow"><i /> THINK MODE / SYSTEM MAP</p><h2>Every output is<br /><em>a connected decision.</em></h2><div className="map-nodes"><button onClick={() => { setThinkMode(false); document.getElementById("systems")?.scrollIntoView() }}>EXPERIENCE</button><button onClick={() => { setThinkMode(false); document.getElementById("proof")?.scrollIntoView() }}>PROOF</button><button onClick={() => { setThinkMode(false); document.getElementById("graph")?.scrollIntoView() }}>CAPABILITY</button><button onClick={() => { setThinkMode(false); document.getElementById("channel")?.scrollIntoView() }}>QUESTION</button></div><p className="map-note">select a node to inspect the corresponding chapter</p></div></div>}
