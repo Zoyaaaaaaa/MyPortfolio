@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AI Systems Architect | Production AI Systems",
-  description: "Designing production-grade hybrid retrieval systems, multi-agent orchestration, and enterprise-scale knowledge infrastructure.",
+  title: "Zoya Hassan — Cognitive System",
+  description: "Zoya Hassan designs intelligent systems where retrieval becomes memory and software becomes a collaborator.",
 };
 
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-background">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
